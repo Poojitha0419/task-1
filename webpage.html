@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS for Styling -->
+    <style>
+        /* General body styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #d35400;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+
+        /* Navigation Menu */
+        nav {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #e67e22;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            color: #ffcc00;
+        }
+
+        /* Main Sections */
+        section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #e67e22;
+            font-size: 28px;
+            margin-bottom: 20px;
+text-align:right;
+            }
+
+        /* Home Section with Image */
+        .home {
+            background-image: url('https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg'); /* Replace with actual image */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 20px;
+            height:550px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .home p {
+            font-size: 20px;
+            line-height: 1.5;
+text-align:right;
+            
+        }
+
+        /* Menu Section */
+        .menu-item {
+            display: inline-block;
+            width: 30%;
+            margin: 10px;
+            padding: 15px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .menu-item h3 {
+            color: #d35400;
+        }
+
+        .menu-item p {
+            color: #555;
+        }
+
+        .menu-item span {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        /* Contact Form */
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #d35400;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #e67e22;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Gourmet Delight</h1>
+        <p>Where every meal is a masterpiece!</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+        <!-- Add external links (to social media or other pages) -->
+        <a href="https://www.instagram.com/gourmetdelight" target="_blank">Instagram</a>
+        <a href="https://www.facebook.com/gourmetdelight" target="_blank">Facebook</a>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="home">
+        <h2>Welcome to Gourmet Delight</h2><br>
+        <p>
+            Enjoy an exquisite dining experience at our restaurant,<br>where every dish is carefully crafted to tantalize your taste buds.
+        </p>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu">
+        <h2><center>Our Menu<center></h2>
+        <div class="menu-item">
+            <img src="salmon.jpg" alt="Grilled Salmon"> <!-- Replace with actual image -->
+            <h3>Grilled Salmon</h3>
+            <p>Perfectly grilled salmon served with a lemon butter sauce and seasonal vegetables.</p>
+            <span>$20</span>
+        </div>
+        <div class="menu-item">
+            <img src="pasta.jpg" alt="Pasta Primavera"> <!-- Replace with actual image -->
+            <h3>Pasta Primavera</h3>
+            <p>Fresh vegetables sautéed in olive oil with a hint of garlic and tossed with penne pasta.</p>
+            <span>$15</span>
+        </div>
+        <div class="menu-item">
+            <img src="burger.jpg" alt="Classic Cheeseburger"> <!-- Replace with actual image -->
+            <h3>Classic Cheeseburger</h3>
+            <p>Juicy grilled beef patty with melted cheese, lettuce, tomato, and a side of fries.</p>
+            <span>$12</span>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" >
+        <h2 style="text-align: left;">About Us</h2>
+        <p>
+            At Gourmet Delight, we believe that great food should be shared in a warm and welcoming atmosphere. 
+            Our chefs use only the freshest ingredients to create dishes that will delight your senses.
+        </p>
+        <p>Follow us on <a href="https://www.instagram.com/gourmetdelight" target="_blank">Instagram</a> and <a href="https://www.facebook.com/gourmetdelight" target="_blank">Facebook</a>!</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2 style="text-align: left;">contact Us</h2>
+        <form onsubmit="showConfirmation(event)">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- JavaScript for form interaction -->
+    <script>
+        function showConfirmation(event) {
+            event.preventDefault();
+            alert("Thank you for reaching out to us! We'll get back to you soon.");
+        }
+    </script>
+
+</body>
+</html>
